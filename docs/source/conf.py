@@ -6,6 +6,13 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here.
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+
 project = 'Lumache'
 copyright = '2026, Graziella'
 author = 'Graziella'
@@ -16,6 +23,8 @@ release = '0.1'
 
 extensions = [
     'sphinx.ext.duration',
+    'sphinx.ext.doctest',
+    'sphinx.ext.autodoc'
 ]
 
 templates_path = ['_templates']
